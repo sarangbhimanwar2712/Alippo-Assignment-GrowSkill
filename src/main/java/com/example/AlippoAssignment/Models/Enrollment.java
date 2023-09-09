@@ -1,5 +1,6 @@
 package com.example.AlippoAssignment.Models;
 
+import com.example.AlippoAssignment.Enums.PaymentStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,7 +22,8 @@ public class Enrollment {
 
 //    private int userId ;
 //    private int courseId ;
-    private LocalDate entrollmentDate ;
+    private LocalDate entrollmentDate;
+    private PaymentStatus paymentStatus ;
 
     //Enrollment is child wrt user
     @ManyToOne
