@@ -40,4 +40,9 @@ public class PaymentService {
         paymentRepository.save(payment) ;
         return "Done Payment" ;
     }
+
+    public Payment getPaymentDetail(int paymentId){
+        Payment payment = paymentRepository.findById(paymentId).get() ;
+        return payment ;
+    }
 }

@@ -16,4 +16,10 @@ public class PaymentConrtoller {
                               @RequestParam("courseId") int courseId){
         return paymentService.addPayment(payment,userId,courseId) ;
     }
+
+    @GetMapping("/get_payment_detail")
+    public Payment getPaymentDetail(@RequestParam("paymentId")int paymentId){
+         Payment payment = paymentService.getPaymentDetail(paymentId) ;
+         return  payment ;
+    }
 }
